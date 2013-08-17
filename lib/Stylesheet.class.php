@@ -84,8 +84,8 @@ class WPLessStylesheet
   {
     $target_file =          $this->computeTargetPath();
 
-    $this->source_path =    WP_CONTENT_DIR.preg_replace('#^'.content_url().'#U', '', $this->stylesheet->src);
-    $this->source_uri =     $this->stylesheet->src;
+    $this->source_path =    ABSPATH.preg_replace('#^'.site_url().'#U', '', $this->stylesheet->src);
+    $this->source_uri =     $this->stylesheet->srcs->source_path =    ABSPATH.preg_replace('#^'.site_url().'#U', '', $this->stylesheet->src);
     $this->target_path =    self::$upload_dir.$target_file;
     $this->target_uri =     self::$upload_uri.$target_file;
 
